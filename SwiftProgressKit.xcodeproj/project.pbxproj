@@ -16,6 +16,8 @@
 		642F9C5621043595005CBBB8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C5521043595005CBBB8 /* BaseView.swift */; };
 		642F9C5B210441BC005CBBB8 /* IndeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C5A210441BC005CBBB8 /* IndeterminateAnimation.swift */; };
 		642F9C5D2104427C005CBBB8 /* MaterialProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C5C2104427C005CBBB8 /* MaterialProgress.swift */; };
+		642F9C5F21044419005CBBB8 /* Rainbow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C5E21044419005CBBB8 /* Rainbow.swift */; };
+		642F9C612104449E005CBBB8 /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C602104449E005CBBB8 /* Crawler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		642F9C5521043595005CBBB8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		642F9C5A210441BC005CBBB8 /* IndeterminateAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndeterminateAnimation.swift; sourceTree = "<group>"; };
 		642F9C5C2104427C005CBBB8 /* MaterialProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialProgress.swift; sourceTree = "<group>"; };
+		642F9C5E21044419005CBBB8 /* Rainbow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rainbow.swift; sourceTree = "<group>"; };
+		642F9C602104449E005CBBB8 /* Crawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 			children = (
 				642F9C5A210441BC005CBBB8 /* IndeterminateAnimation.swift */,
 				642F9C5C2104427C005CBBB8 /* MaterialProgress.swift */,
+				642F9C5E21044419005CBBB8 /* Rainbow.swift */,
+				642F9C602104449E005CBBB8 /* Crawler.swift */,
 			);
 			path = Indeterminate;
 			sourceTree = "<group>";
@@ -230,6 +236,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642F9C612104449E005CBBB8 /* Crawler.swift in Sources */,
+				642F9C5F21044419005CBBB8 /* Rainbow.swift in Sources */,
 				642F9C5B210441BC005CBBB8 /* IndeterminateAnimation.swift in Sources */,
 				642F9C5621043595005CBBB8 /* BaseView.swift in Sources */,
 				642F9C5D2104427C005CBBB8 /* MaterialProgress.swift in Sources */,
