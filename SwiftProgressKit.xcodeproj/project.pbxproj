@@ -14,6 +14,8 @@
 		642F9C4021043459005CBBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642F9C3E21043459005CBBB8 /* LaunchScreen.storyboard */; };
 		642F9C4B21043459005CBBB8 /* SwiftProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C4A21043459005CBBB8 /* SwiftProgressKitTests.swift */; };
 		642F9C5621043595005CBBB8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C5521043595005CBBB8 /* BaseView.swift */; };
+		642F9C5B210441BC005CBBB8 /* IndeterminateAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C5A210441BC005CBBB8 /* IndeterminateAnimation.swift */; };
+		642F9C5D2104427C005CBBB8 /* MaterialProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C5C2104427C005CBBB8 /* MaterialProgress.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		642F9C4A21043459005CBBB8 /* SwiftProgressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProgressKitTests.swift; sourceTree = "<group>"; };
 		642F9C4C21043459005CBBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		642F9C5521043595005CBBB8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		642F9C5A210441BC005CBBB8 /* IndeterminateAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndeterminateAnimation.swift; sourceTree = "<group>"; };
+		642F9C5C2104427C005CBBB8 /* MaterialProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialProgress.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				642F9C5521043595005CBBB8 /* BaseView.swift */,
+				642F9C5921044197005CBBB8 /* Determinate */,
+				642F9C582104418A005CBBB8 /* Indeterminate */,
 				642F9C3521043458005CBBB8 /* AppDelegate.swift */,
 				642F9C3721043458005CBBB8 /* ViewController.swift */,
 				642F9C57210435A3005CBBB8 /* SystemFiles */,
@@ -105,6 +111,22 @@
 				642F9C4121043459005CBBB8 /* Info.plist */,
 			);
 			name = SystemFiles;
+			sourceTree = "<group>";
+		};
+		642F9C582104418A005CBBB8 /* Indeterminate */ = {
+			isa = PBXGroup;
+			children = (
+				642F9C5A210441BC005CBBB8 /* IndeterminateAnimation.swift */,
+				642F9C5C2104427C005CBBB8 /* MaterialProgress.swift */,
+			);
+			path = Indeterminate;
+			sourceTree = "<group>";
+		};
+		642F9C5921044197005CBBB8 /* Determinate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Determinate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642F9C5B210441BC005CBBB8 /* IndeterminateAnimation.swift in Sources */,
 				642F9C5621043595005CBBB8 /* BaseView.swift in Sources */,
+				642F9C5D2104427C005CBBB8 /* MaterialProgress.swift in Sources */,
 				642F9C3821043458005CBBB8 /* ViewController.swift in Sources */,
 				642F9C3621043458005CBBB8 /* AppDelegate.swift in Sources */,
 			);
