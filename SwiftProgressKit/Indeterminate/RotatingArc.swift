@@ -35,7 +35,7 @@ class RotatingArc: IndeterminateAnimation {
     }
     
     var radius: CGFloat {
-        return (self.frame.width / 2) * CGFloat(0.75)
+        return (self.frame.width / 2) * CGFloat(0.5)
     }
     
     var rotationAnimation: CABasicAnimation = {

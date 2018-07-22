@@ -37,6 +37,7 @@ open class MaterialProgress: IndeterminateAnimation {
         tempRotation.repeatCount = Float.infinity
         tempRotation.fromValue = 0
         tempRotation.toValue = 1
+        tempRotation.isRemovedOnCompletion = false
         tempRotation.isCumulative = true
         tempRotation.duration = duration / 2
         return tempRotation
@@ -73,7 +74,8 @@ open class MaterialProgress: IndeterminateAnimation {
         strokeEndAnimation = makeAnimationforKeyPath("strokeEnd")
         strokeStartAnimation = makeAnimationforKeyPath("strokeStart")
         strokeStartAnimation.beginTime = duration / 2
-        animationGroup.animations = [strokeEndAnimation, strokeStartAnimation, ]
+        animationGroup.animations = [strokeEndAnimation, strokeStartAnimation]
+        animationGroup.isRemovedOnCompletion = false
         animationGroup.delegate = self
     }
     
@@ -115,7 +117,7 @@ extension MaterialProgress: CAAnimationDelegate {
         CATransaction.setDisableActions(true)
         currentRotation += strokeRange.end * π2
         currentRotation = currentRotation.truncatingRemainder(dividingBy: π2)
-        progressLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat( currentRotation)))
+        progressLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(currentRotation)))
         CATransaction.commit()
         progressLayer.add(animationGroup, forKey: "strokeEnd")
     }
