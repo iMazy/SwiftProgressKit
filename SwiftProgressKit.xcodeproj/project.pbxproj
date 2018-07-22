@@ -13,6 +13,7 @@
 		642F9C3D21043459005CBBB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 642F9C3C21043459005CBBB8 /* Assets.xcassets */; };
 		642F9C4021043459005CBBB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 642F9C3E21043459005CBBB8 /* LaunchScreen.storyboard */; };
 		642F9C4B21043459005CBBB8 /* SwiftProgressKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C4A21043459005CBBB8 /* SwiftProgressKitTests.swift */; };
+		642F9C5621043595005CBBB8 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C5521043595005CBBB8 /* BaseView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		642F9C4621043459005CBBB8 /* SwiftProgressKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftProgressKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		642F9C4A21043459005CBBB8 /* SwiftProgressKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProgressKitTests.swift; sourceTree = "<group>"; };
 		642F9C4C21043459005CBBB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		642F9C5521043595005CBBB8 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +79,10 @@
 		642F9C3421043458005CBBB8 /* SwiftProgressKit */ = {
 			isa = PBXGroup;
 			children = (
+				642F9C5521043595005CBBB8 /* BaseView.swift */,
 				642F9C3521043458005CBBB8 /* AppDelegate.swift */,
 				642F9C3721043458005CBBB8 /* ViewController.swift */,
-				642F9C3921043458005CBBB8 /* Main.storyboard */,
-				642F9C3C21043459005CBBB8 /* Assets.xcassets */,
-				642F9C3E21043459005CBBB8 /* LaunchScreen.storyboard */,
-				642F9C4121043459005CBBB8 /* Info.plist */,
+				642F9C57210435A3005CBBB8 /* SystemFiles */,
 			);
 			path = SwiftProgressKit;
 			sourceTree = "<group>";
@@ -94,6 +94,17 @@
 				642F9C4C21043459005CBBB8 /* Info.plist */,
 			);
 			path = SwiftProgressKitTests;
+			sourceTree = "<group>";
+		};
+		642F9C57210435A3005CBBB8 /* SystemFiles */ = {
+			isa = PBXGroup;
+			children = (
+				642F9C3921043458005CBBB8 /* Main.storyboard */,
+				642F9C3C21043459005CBBB8 /* Assets.xcassets */,
+				642F9C3E21043459005CBBB8 /* LaunchScreen.storyboard */,
+				642F9C4121043459005CBBB8 /* Info.plist */,
+			);
+			name = SystemFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642F9C5621043595005CBBB8 /* BaseView.swift in Sources */,
 				642F9C3821043458005CBBB8 /* ViewController.swift in Sources */,
 				642F9C3621043458005CBBB8 /* AppDelegate.swift in Sources */,
 			);
@@ -360,6 +372,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftProgressKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,6 +390,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SwiftProgressKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
