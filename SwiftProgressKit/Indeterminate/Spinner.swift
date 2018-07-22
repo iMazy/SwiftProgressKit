@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 open class Spinner: IndeterminateAnimation {
 
     var basicShape = CAShapeLayer()

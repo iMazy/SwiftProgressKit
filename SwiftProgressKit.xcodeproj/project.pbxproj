@@ -20,6 +20,7 @@
 		642F9C612104449E005CBBB8 /* Crawler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C602104449E005CBBB8 /* Crawler.swift */; };
 		642F9C632104469C005CBBB8 /* ShootingStars.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C622104469C005CBBB8 /* ShootingStars.swift */; };
 		642F9C65210446F0005CBBB8 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C64210446F0005CBBB8 /* Spinner.swift */; };
+		642F9C6721044758005CBBB8 /* RotatingArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642F9C6621044758005CBBB8 /* RotatingArc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		642F9C602104449E005CBBB8 /* Crawler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crawler.swift; sourceTree = "<group>"; };
 		642F9C622104469C005CBBB8 /* ShootingStars.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShootingStars.swift; sourceTree = "<group>"; };
 		642F9C64210446F0005CBBB8 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		642F9C6621044758005CBBB8 /* RotatingArc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingArc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				642F9C602104449E005CBBB8 /* Crawler.swift */,
 				642F9C622104469C005CBBB8 /* ShootingStars.swift */,
 				642F9C64210446F0005CBBB8 /* Spinner.swift */,
+				642F9C6621044758005CBBB8 /* RotatingArc.swift */,
 			);
 			path = Indeterminate;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				642F9C6721044758005CBBB8 /* RotatingArc.swift in Sources */,
 				642F9C612104449E005CBBB8 /* Crawler.swift in Sources */,
 				642F9C65210446F0005CBBB8 /* Spinner.swift in Sources */,
 				642F9C5F21044419005CBBB8 /* Rainbow.swift in Sources */,

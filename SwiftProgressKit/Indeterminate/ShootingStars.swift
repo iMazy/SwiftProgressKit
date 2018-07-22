@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 open class ShootingStars: IndeterminateAnimation {
 
     fileprivate let animationDuration = 1.0
