@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OgF-AY-PIv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ProgressKit-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftProgressKit" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,20 +18,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9k4-FN-bF0" customClass="MaterialProgress" customModule="SwiftProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="22" y="75" width="100" height="100"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vt8-76-HKk" customClass="ShootingStars" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="375" height="12"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="4Ai-lG-Svz"/>
-                                    <constraint firstAttribute="height" constant="100" id="GWd-yQ-h4C"/>
+                                    <constraint firstAttribute="height" constant="12" id="ihT-R8-YHq"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9k4-FN-bF0" customClass="MaterialProgress" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="12.5" y="116" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRa-jo-qvP" customClass="MaterialProgress" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="12.5" y="216" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                        <color key="value" red="0.45882352941176469" green="0.67843137254901964" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                        <color key="value" red="0.90588235289999997" green="0.066686134090000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="39"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PrR-rl-Wjo" customClass="Spinner" customModule="SwiftProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="137.5" y="75" width="100" height="100"/>
+                                <rect key="frame" x="102.5" y="116" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="3ZL-mL-aTB"/>
-                                    <constraint firstAttribute="height" constant="100" id="gnG-2W-PTg"/>
+                                    <constraint firstAttribute="width" constant="80" id="14B-sF-SAw"/>
+                                    <constraint firstAttribute="height" constant="80" id="GLq-hi-ixK"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="starSize">
@@ -39,25 +63,101 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzc-pN-gie" customClass="Rainbow" customModule="SwiftProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="253.5" y="75" width="100" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="WxS-1v-0lc"/>
-                                    <constraint firstAttribute="width" constant="100" id="fto-Ns-lqg"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
-                                        <real key="value" value="2"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="16"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SsU-nf-0G7" customClass="RotatingArc" customModule="SwiftProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="253" y="214" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6NX-zv-vW4" customClass="Spinner" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="103" y="216" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="6" height="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EH4-lB-9dP" customClass="Spinner" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="103" y="316" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="6" height="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                        <color key="value" red="0.90588235289999997" green="0.066686134090000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-tP-Pex" customClass="Spinner" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="103" y="416" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="12" height="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockwise" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="distance">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="56"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6oc-og-4Vq" customClass="Crawler" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="192.5" y="116" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="PP1-hd-teS"/>
+                                    <constraint firstAttribute="height" constant="80" id="azO-Td-6nA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZTY-vI-iqm" customClass="Crawler" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="192.5" y="216" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="39"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KJ1-KT-Mef" customClass="Crawler" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="192" y="316" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                        <color key="value" red="0.90588235289999997" green="0.066686134090000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SsU-nf-0G7" customClass="RotatingArc" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="282.5" y="116" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Psa-vU-fdy"/>
+                                    <constraint firstAttribute="height" constant="80" id="YyX-8y-6pf"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
                                         <real key="value" value="4"/>
@@ -68,33 +168,125 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="clockWise" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vt8-76-HKk" customClass="ShootingStars" customModule="SwiftProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="389" width="375" height="12"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPO-KK-444" customClass="RotatingArc" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="282.5" y="216.5" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="displayAfterAnimationEnds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="arcLength">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockWise" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6oc-og-4Vq" customClass="Crawler" customModule="SwiftProgressKit" customModuleProvider="target">
-                                <rect key="frame" x="22" y="214" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yzc-pN-gie" customClass="Rainbow" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="12.5" y="316" width="80" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZP-Kr-ItD" customClass="RotatingArc" customModule="SwiftProgressKit" customModuleProvider="target">
+                                <rect key="frame" x="282.5" y="316" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="strokeWidth">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="arcLength">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="clockWise" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="background">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="foreground">
+                                        <color key="value" red="0.90588235289999997" green="0.066686134090000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9k4-FN-bF0" firstAttribute="centerY" secondItem="PrR-rl-Wjo" secondAttribute="centerY" id="9LF-NO-ZRJ"/>
-                            <constraint firstItem="yzc-pN-gie" firstAttribute="leading" secondItem="PrR-rl-Wjo" secondAttribute="trailing" constant="16" id="W5d-Kq-8Qu"/>
-                            <constraint firstItem="yzc-pN-gie" firstAttribute="centerY" secondItem="PrR-rl-Wjo" secondAttribute="centerY" id="Xit-8v-Fgk"/>
-                            <constraint firstItem="PrR-rl-Wjo" firstAttribute="leading" secondItem="9k4-FN-bF0" secondAttribute="trailing" constant="16" id="biF-yH-rBi"/>
-                            <constraint firstItem="PrR-rl-Wjo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="55" id="e29-Dr-5BN"/>
-                            <constraint firstItem="PrR-rl-Wjo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eQy-oL-LFX"/>
+                            <constraint firstItem="jRa-jo-qvP" firstAttribute="centerX" secondItem="9k4-FN-bF0" secondAttribute="centerX" id="0O6-R9-0M4"/>
+                            <constraint firstItem="yzc-pN-gie" firstAttribute="centerX" secondItem="9k4-FN-bF0" secondAttribute="centerX" id="0mD-3V-Kx4"/>
+                            <constraint firstItem="PrR-rl-Wjo" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-45" id="1ZP-bF-e8e"/>
+                            <constraint firstItem="vt8-76-HKk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="2LU-8l-XD1"/>
+                            <constraint firstItem="jRa-jo-qvP" firstAttribute="top" secondItem="9k4-FN-bF0" secondAttribute="bottom" constant="20" id="72O-Az-de7"/>
+                            <constraint firstItem="SsU-nf-0G7" firstAttribute="top" secondItem="vt8-76-HKk" secondAttribute="bottom" constant="20" id="8vJ-uZ-9eK"/>
+                            <constraint firstItem="2ZP-Kr-ItD" firstAttribute="centerX" secondItem="SsU-nf-0G7" secondAttribute="centerX" id="ALT-Mr-haB"/>
+                            <constraint firstItem="PrR-rl-Wjo" firstAttribute="top" secondItem="vt8-76-HKk" secondAttribute="bottom" constant="20" id="Gyh-ix-rIS"/>
+                            <constraint firstItem="SsU-nf-0G7" firstAttribute="centerY" secondItem="6oc-og-4Vq" secondAttribute="centerY" id="HWe-xe-Egg"/>
+                            <constraint firstItem="EH4-lB-9dP" firstAttribute="height" secondItem="PrR-rl-Wjo" secondAttribute="height" id="KNv-t7-Tku"/>
+                            <constraint firstItem="6oc-og-4Vq" firstAttribute="top" secondItem="vt8-76-HKk" secondAttribute="bottom" constant="20" id="MT3-AV-zrp"/>
+                            <constraint firstItem="2ZP-Kr-ItD" firstAttribute="width" secondItem="SsU-nf-0G7" secondAttribute="width" id="On1-jf-k8B"/>
+                            <constraint firstItem="ZTY-vI-iqm" firstAttribute="centerX" secondItem="6oc-og-4Vq" secondAttribute="centerX" id="PYF-Aa-xqf"/>
+                            <constraint firstItem="Pf8-tP-Pex" firstAttribute="height" secondItem="PrR-rl-Wjo" secondAttribute="height" id="QI7-gc-3Hm"/>
+                            <constraint firstItem="EH4-lB-9dP" firstAttribute="centerX" secondItem="PrR-rl-Wjo" secondAttribute="centerX" id="RCu-pv-uPU"/>
+                            <constraint firstItem="KJ1-KT-Mef" firstAttribute="centerX" secondItem="6oc-og-4Vq" secondAttribute="centerX" id="RdH-87-ugJ"/>
+                            <constraint firstItem="9k4-FN-bF0" firstAttribute="top" secondItem="PrR-rl-Wjo" secondAttribute="top" id="Sdk-m4-jpA"/>
+                            <constraint firstItem="vt8-76-HKk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UDt-Fz-407"/>
+                            <constraint firstItem="9k4-FN-bF0" firstAttribute="width" secondItem="PrR-rl-Wjo" secondAttribute="width" id="WEv-E1-UMJ"/>
+                            <constraint firstItem="SsU-nf-0G7" firstAttribute="leading" secondItem="6oc-og-4Vq" secondAttribute="trailing" constant="10" id="WuK-1X-tQB"/>
+                            <constraint firstItem="PrR-rl-Wjo" firstAttribute="leading" secondItem="9k4-FN-bF0" secondAttribute="trailing" constant="10" id="ZRa-2o-8vC"/>
+                            <constraint firstItem="ZTY-vI-iqm" firstAttribute="width" secondItem="PrR-rl-Wjo" secondAttribute="width" id="bJo-hl-oet"/>
+                            <constraint firstItem="EH4-lB-9dP" firstAttribute="width" secondItem="PrR-rl-Wjo" secondAttribute="width" id="bXj-uz-2am"/>
+                            <constraint firstItem="2ZP-Kr-ItD" firstAttribute="centerY" secondItem="yzc-pN-gie" secondAttribute="centerY" id="bcY-vG-nPN"/>
+                            <constraint firstItem="Pf8-tP-Pex" firstAttribute="centerX" secondItem="PrR-rl-Wjo" secondAttribute="centerX" id="cHG-CN-Bdl"/>
+                            <constraint firstItem="EH4-lB-9dP" firstAttribute="centerY" secondItem="yzc-pN-gie" secondAttribute="centerY" id="cPu-Ni-dJZ"/>
+                            <constraint firstItem="bPO-KK-444" firstAttribute="height" secondItem="PrR-rl-Wjo" secondAttribute="height" id="d1R-za-rtq"/>
+                            <constraint firstItem="9k4-FN-bF0" firstAttribute="bottom" secondItem="PrR-rl-Wjo" secondAttribute="bottom" id="dHy-Yr-oCJ"/>
+                            <constraint firstItem="vt8-76-HKk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ePQ-yv-vZp"/>
+                            <constraint firstItem="ZTY-vI-iqm" firstAttribute="centerY" secondItem="6NX-zv-vW4" secondAttribute="centerY" id="eZb-i7-df7"/>
+                            <constraint firstItem="KJ1-KT-Mef" firstAttribute="centerY" secondItem="yzc-pN-gie" secondAttribute="centerY" id="ego-gO-Kgs"/>
+                            <constraint firstItem="yzc-pN-gie" firstAttribute="height" secondItem="9k4-FN-bF0" secondAttribute="height" id="eks-zW-AtG"/>
+                            <constraint firstItem="6NX-zv-vW4" firstAttribute="width" secondItem="PrR-rl-Wjo" secondAttribute="width" id="fGM-Wj-uQi"/>
+                            <constraint firstItem="bPO-KK-444" firstAttribute="centerX" secondItem="SsU-nf-0G7" secondAttribute="centerX" id="gCr-Et-v4r"/>
+                            <constraint firstItem="jRa-jo-qvP" firstAttribute="height" secondItem="9k4-FN-bF0" secondAttribute="height" id="gfv-z8-zb6"/>
+                            <constraint firstItem="KJ1-KT-Mef" firstAttribute="height" secondItem="6oc-og-4Vq" secondAttribute="height" id="ixV-cl-FNv"/>
+                            <constraint firstItem="6NX-zv-vW4" firstAttribute="centerX" secondItem="PrR-rl-Wjo" secondAttribute="centerX" id="jc9-ZW-Hrc"/>
+                            <constraint firstItem="bPO-KK-444" firstAttribute="width" secondItem="PrR-rl-Wjo" secondAttribute="width" id="lQf-a5-oDQ"/>
+                            <constraint firstItem="6NX-zv-vW4" firstAttribute="height" secondItem="PrR-rl-Wjo" secondAttribute="height" id="p5t-6U-KfV"/>
+                            <constraint firstItem="Pf8-tP-Pex" firstAttribute="top" secondItem="EH4-lB-9dP" secondAttribute="bottom" constant="20" id="pTc-5t-nm1"/>
+                            <constraint firstItem="yzc-pN-gie" firstAttribute="width" secondItem="9k4-FN-bF0" secondAttribute="width" id="qFR-6K-Ukg"/>
+                            <constraint firstItem="6oc-og-4Vq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="45" id="rvQ-lc-tLZ"/>
+                            <constraint firstItem="9k4-FN-bF0" firstAttribute="height" secondItem="PrR-rl-Wjo" secondAttribute="height" id="tMr-pH-D3D"/>
+                            <constraint firstItem="Pf8-tP-Pex" firstAttribute="width" secondItem="PrR-rl-Wjo" secondAttribute="width" id="tpo-Hs-Q8C"/>
+                            <constraint firstItem="bPO-KK-444" firstAttribute="centerY" secondItem="ZTY-vI-iqm" secondAttribute="centerY" id="u4k-mN-rQd"/>
+                            <constraint firstItem="jRa-jo-qvP" firstAttribute="width" secondItem="9k4-FN-bF0" secondAttribute="width" id="uFP-Fs-b7C"/>
+                            <constraint firstItem="ZTY-vI-iqm" firstAttribute="height" secondItem="PrR-rl-Wjo" secondAttribute="height" id="vJr-hh-rDo"/>
+                            <constraint firstItem="6NX-zv-vW4" firstAttribute="centerY" secondItem="jRa-jo-qvP" secondAttribute="centerY" id="vVy-7R-7fS"/>
+                            <constraint firstItem="yzc-pN-gie" firstAttribute="top" secondItem="jRa-jo-qvP" secondAttribute="bottom" constant="20" id="xnU-xj-3kR"/>
+                            <constraint firstItem="2ZP-Kr-ItD" firstAttribute="height" secondItem="SsU-nf-0G7" secondAttribute="height" id="z8u-fV-g3t"/>
+                            <constraint firstItem="KJ1-KT-Mef" firstAttribute="width" secondItem="6oc-og-4Vq" secondAttribute="width" id="zeg-U7-ZnU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="ProgressKit" id="IpW-DD-R32"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="130.88455772113943"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B6f-A1-qoW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OgF-AY-PIv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yvj-34-Ogb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZN4-fF-zsj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meU-Oz-6St" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
         </scene>
