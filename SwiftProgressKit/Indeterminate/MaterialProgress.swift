@@ -37,7 +37,7 @@ open class MaterialProgress: IndeterminateAnimation {
         tempRotation.repeatCount = Float.infinity
         tempRotation.fromValue = 0
         tempRotation.toValue = 1
-        tempRotation.isRemovedOnCompletion = false
+//        tempRotation.isRemovedOnCompletion = false
         tempRotation.isCumulative = true
         tempRotation.duration = duration / 2
         return tempRotation
@@ -75,9 +75,12 @@ open class MaterialProgress: IndeterminateAnimation {
         strokeStartAnimation = makeAnimationforKeyPath("strokeStart")
         strokeStartAnimation.beginTime = duration / 2
         animationGroup.animations = [strokeEndAnimation, strokeStartAnimation]
-        animationGroup.isRemovedOnCompletion = false
+//        animationGroup.isRemovedOnCompletion = false
         animationGroup.delegate = self
     }
+    
+    var currentRotation = 0.0
+    let π2 = Double.pi * 2
     
     override func configureLayers() {
         super.configureLayers()
@@ -90,20 +93,18 @@ open class MaterialProgress: IndeterminateAnimation {
         // Progress Layer
         let radius = (rect.width / 2) * 0.75
         progressLayer.frame =  rect
-        progressLayer.lineWidth = lineWidth == -1 ? radius / 10: lineWidth
+        progressLayer.lineWidth = lineWidth == -1 ? radius / 10 : lineWidth
         let arcPath = UIBezierPath()
-        arcPath.addArc(withCenter: CGPoint(x: rect.midX, y: rect.midX), radius: radius, startAngle: 0, endAngle: 360, clockwise: false)
+        arcPath.addArc(withCenter: CGPoint(x: rect.midX, y: rect.midY), radius: radius, startAngle: 0, endAngle: CGFloat(π2), clockwise: true)
         progressLayer.path = arcPath.cgPath
         backgroundRotationLayer.addSublayer(progressLayer)
     }
-    
-    var currentRotation = 0.0
-    let π2 = Double.pi * 2
     
     override func startAnimation() {
         progressLayer.add(animationGroup, forKey: "strokeEnd")
         backgroundRotationLayer.add(rotationAnimation, forKey: rotationAnimation.keyPath)
     }
+    
     override func stopAnimation() {
         backgroundRotationLayer.removeAllAnimations()
         progressLayer.removeAllAnimations()
@@ -115,7 +116,7 @@ extension MaterialProgress: CAAnimationDelegate {
         if !animate { return }
         CATransaction.begin()
         CATransaction.setDisableActions(true)
-        currentRotation += strokeRange.end * π2
+        currentRotation += (strokeRange.end * π2)
         currentRotation = currentRotation.truncatingRemainder(dividingBy: π2)
         progressLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(currentRotation)))
         CATransaction.commit()

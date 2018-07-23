@@ -34,7 +34,7 @@ open class Crawler: IndeterminateAnimation {
         super.configureLayers()
         let rect = self.bounds
         
-        let insetRect = rect.insetBy(dx: rect.width * 0.16, dy: rect.width * 0.15)
+        let insetRect = rect.insetBy(dx: rect.width * 0.2, dy: rect.width * 0.2)
         
         for i in 0 ..< 5 {
             let starShape = CAShapeLayer()
@@ -44,11 +44,11 @@ open class Crawler: IndeterminateAnimation {
             let circleWidth = smallCircleSize - Double(i) * 2
             starShape.bounds = CGRect(x: 0, y: 0, width: circleWidth, height: circleWidth)
             starShape.cornerRadius = CGFloat(circleWidth / 2)
-            starShape.position = CGPoint(x: rect.midX, y: rect.midY + insetRect.height / 2)
+            starShape.position = CGPoint(x: rect.midX, y: rect.midY + (insetRect.height / 2))
             self.layer.addSublayer(starShape)
             
             let arcPath = UIBezierPath()
-            arcPath.addArc(withCenter: CGPoint(x: insetRect.midX, y: insetRect.midY), radius: insetRect.width / 2, startAngle: 90, endAngle: -360 + 90, clockwise: true)
+            arcPath.addArc(withCenter: CGPoint(x: insetRect.midX, y: insetRect.midY), radius: insetRect.width / 2, startAngle: CGFloat(Double.pi / 2), endAngle: CGFloat(Double.pi / 2) - 0.001, clockwise: true)
             
             let rotationAnimation = CAKeyframeAnimation(keyPath: "position")
             rotationAnimation.path = arcPath.cgPath
