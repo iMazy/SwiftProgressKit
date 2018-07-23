@@ -34,11 +34,11 @@ open class MaterialProgress: IndeterminateAnimation {
     
     var rotationAnimation: CABasicAnimation = {
         var tempRotation = CABasicAnimation(keyPath: "transform.rotation")
-        tempRotation.repeatCount = Float.infinity
+        tempRotation.repeatCount = HUGE
         tempRotation.fromValue = 0
         tempRotation.toValue = 1
-//        tempRotation.isRemovedOnCompletion = false
         tempRotation.isCumulative = true
+        tempRotation.isRemovedOnCompletion = false
         tempRotation.duration = duration / 2
         return tempRotation
     }()
@@ -75,7 +75,6 @@ open class MaterialProgress: IndeterminateAnimation {
         strokeStartAnimation = makeAnimationforKeyPath("strokeStart")
         strokeStartAnimation.beginTime = duration / 2
         animationGroup.animations = [strokeEndAnimation, strokeStartAnimation]
-//        animationGroup.isRemovedOnCompletion = false
         animationGroup.delegate = self
     }
     
