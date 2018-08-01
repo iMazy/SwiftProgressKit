@@ -75,6 +75,9 @@ open class MaterialProgress: IndeterminateAnimation {
         strokeStartAnimation = makeAnimationforKeyPath("strokeStart")
         strokeStartAnimation.beginTime = duration / 2
         animationGroup.animations = [strokeEndAnimation, strokeStartAnimation]
+        animationGroup.isRemovedOnCompletion = false
+        animationGroup.fillMode = kCAFillModeForwards
+        
         animationGroup.delegate = self
     }
     
@@ -90,9 +93,9 @@ open class MaterialProgress: IndeterminateAnimation {
         self.layer.addSublayer(backgroundRotationLayer)
         
         // Progress Layer
-        let radius = (rect.width / 2) * 0.75
+        let radius = (rect.width / 2) * 0.6
         progressLayer.frame =  rect
-        progressLayer.lineWidth = lineWidth == -1 ? radius / 10 : lineWidth
+        progressLayer.lineWidth = lineWidth == -1 ? radius / 5 : lineWidth
         let arcPath = UIBezierPath()
         arcPath.addArc(withCenter: CGPoint(x: rect.midX, y: rect.midY), radius: radius, startAngle: 0, endAngle: CGFloat(π2), clockwise: true)
         progressLayer.path = arcPath.cgPath
@@ -100,7 +103,7 @@ open class MaterialProgress: IndeterminateAnimation {
     }
     
     override func startAnimation() {
-        progressLayer.add(animationGroup, forKey: "strokeEnd")
+        progressLayer.add(animationGroup, forKey: "strokeAnimation")
         backgroundRotationLayer.add(rotationAnimation, forKey: rotationAnimation.keyPath)
     }
     
@@ -113,12 +116,13 @@ open class MaterialProgress: IndeterminateAnimation {
 extension MaterialProgress: CAAnimationDelegate {
     open func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         if !animate { return }
+        progressLayer.removeAnimation(forKey: "strokeAnimation")
         CATransaction.begin()
         CATransaction.setDisableActions(true)
         currentRotation += (strokeRange.end * π2)
         currentRotation = currentRotation.truncatingRemainder(dividingBy: π2)
         progressLayer.setAffineTransform(CGAffineTransform(rotationAngle: CGFloat(currentRotation)))
         CATransaction.commit()
-        progressLayer.add(animationGroup, forKey: "strokeEnd")
+        progressLayer.add(animationGroup, forKey: "strokeAnimation")
     }
 }
